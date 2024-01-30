@@ -21,11 +21,11 @@
                     echo '<div class="box_items '.$mr.'">
                     <div class="box_items_img">
                     <img src="'.$hinh.'" alt="">
-                <div class="add" href="">ADD TO CART</div>
+                <div class="" href=""></div>
              </div>
               <a class="item_name" href="'. $linksp .'">'.$name.'</a>
               
-              <p class="price">$'.$price.'</p>
+              <p class="price">'.$price.' đ</p>
               
            </div>';
                     $i+=1;
