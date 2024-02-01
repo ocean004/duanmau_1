@@ -1,1 +1,1 @@
-<h1>Control page</h1>
+<center><h1>ADMIN page</h1></center>

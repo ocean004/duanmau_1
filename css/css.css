@@ -9,10 +9,18 @@
     box-sizing:border-box;
 }
 body{
-   font-family:'Roboto', sans-serif; 
+  font-family: 'Lexend', sans-serif;
+  background-color: rgb(248, 130, 46)
 }
-td {
-  padding: 0 20px;
+.icon{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+}
+.cart{
+  width: 35px;
+  height: 35px;
+  margin-left:400px ;
 }
 .boxcenter{
     width:90%;
@@ -23,58 +31,62 @@ td {
   width:100%;
 }
 .row2{
-float:left;
+    float:left;
     width:100%;
 }
+.center{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
 .mb{
-    margin-bottom:30px;
+    margin-bottom:10px;
+}
+.mb1{
+  margin-bottom:5px;
 }
 .mb10{
     margin-bottom:10px;
 }
   /* CSS CHO PHẦN HEADER */
-.fa-cart-shopping:hover{
-  background-color: white;
-}
-.cart:hover{
-  background-color: white;
-}
 .header{
-    background:coral;
-    border:1px solid #000;
+    background:yellow;
     font-size:16px;
-    padding:5px; 
+    padding:1px;
+    /* height: 60px; */
+    display: flex;
+    justify-content: center;
 }
-
 .menu{
-    background: coral;
+    background:black;
     border:1px solid #000;
    
     padding:5px;
-    height:45px;
+    height:50px;
 
 }
 .menu ul{
   display:flex;
   align-items:center;
-  gap:40px;
+  gap:30px;
   }
 .menu ul li{
   list-style:none;
 }
 .menu li a{
-  color:black;
+  color:white;
   text-decoration:none;
 }
 .menu li a:hover,.dropdown:hover .dropbtn{
- background-color:rgb(239, 239, 40);
- padding:12px 0;
- border: none;
+ /* background-color:black; */
+ padding:13px 0;
+ 
 }
 .dropdown_content{
     display:none;
     position:absolute;
-    background-color: coral;
+    background-color: black;
     min-width:160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index:1;
@@ -88,7 +100,8 @@ float:left;
 
 }
 .dropdown_content a:hover{
-    background-color: #98FB98;
+    background-color: yellow;
+    color: #000;
 }
 .dropdown:hover .dropdown_content{
     display:block;
@@ -110,20 +123,19 @@ float:left;
 .box_title{
     display:flex;
  
-    background:#EEEE;
+    background:black;
     border-top-left-radius:5px;
     border-top-right-radius:5px;
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;
     padding:10px;
-    color:#333;
+    color:white;
     height:30px;
     align-items:center;
    
 }
 .box_content{
-    
-    
+    background-color: yellow;   
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
@@ -134,7 +146,7 @@ float:left;
 }
 .box_content2{
     padding:20px;
-    background:#EEEE;
+    background:yellow;
     border-left:1px solid #ccc;
     border-right:1px solid #ccc;
     border-bottom:1px solid #ccc;
@@ -145,7 +157,6 @@ float:left;
 }
 
 .box_footer{
-        background:#EEEE;
         border-bottom-left-radius:5px;
         border-bottom-right-radius:5px;  
         padding:10px;
@@ -161,32 +172,32 @@ float:left;
 }
 .banner img{
 width:100%;
-height:490px;
+height:400px;
 }
 .pre, .next{
     cursor:pointer;
     position:absolute;
-    top:50%;
+    top:45%;
     width:auto;
     padding:16px;
-    color:white;
+    color:black;
     font-weight:bold;
     font-size:18px;
-    transition:0.6s ease-in-out;
+    transition:0.2s ease-in-out;
     border-radius:0 3px 3px 0;
     border:none;
     
 }
 .pre:hover, .next:hover{
-    background-color:rgba(0,0,0,0.8);
+    background-color:yellow;
 }
 .next{
     right:0;
-    border-radius:3px 0 0 3px;
+    border-radius:40px 0px 0px 40px;
 }
 .pre{
     left:0;
-    border-radius:0 3px 3px 0;
+    border-radius:0 40px 40px 0;
 }
 .items{
     width:95%;
@@ -196,35 +207,40 @@ height:490px;
     gap:20px;
 }
 .box_items{
-    border:1px solid #EEEE;
-    border-radius:5px;
+    border:1px solid black;
+    /* border-radius:10px; */
     text-align:center;
     height:360px;
     position:relative;
     overflow:hidden;
+    background-color:black;
 }
 .box_items img{
    width:100%;
-   height:250px;
-   border-radius:10px;
+   height:290px;
+   /* border-radius:10px; */
 }
 .box_items a{
     text-decoration:none;
-    color:black;
+    color:white;
   
 }
+.box_items a:hover{
+  text-decoration: none;
+  color: yellow;
+}
 .box_items .item_name{
-    margin-top:10px;
-   font-size:20px;
-   font-weight:bold;
+  margin-top:10px;
+  font-weight:bold;
 
 }
 .box_items .price{
-    margin:10px 0;
+  margin:10px 0;
   color:red;
   font-weight:500;
 
 }
+.box_items_img
 .box_items_img:hover .add{
   width:100%;
  bottom:30.66%;
@@ -245,11 +261,12 @@ form{
 }
 .form_li a{
     text-decoration: none;
-    color:aqua;
+    color:black;
 }
 .form_li a:hover{
     text-decoration: underline;
-    color:red;
+    color:orangered;
+    text-decoration: none;
 }
 .form_li{
    list-style: none;
@@ -284,7 +301,9 @@ form{
 .form_content input[type="submit"]:hover,
 .form_content input[type="reset"]:hover,
 .form_content input[type="button"]:hover{
-    background:#CCC;
+    background:black;
+    color: white;
+    cursor: pointer;
 }
      /*  CSS CHO PHẦN DANH MỤC */
 .product_portfolio ul{
@@ -294,27 +313,29 @@ padding:0;
 }
 .product_portfolio ul li{
 padding:10px 20px;
-background-color:#EEEE;
-border-bottom:1px #ccc solid;
+background-color:yellow;
+border-bottom:1px black solid;
 }
 .product_portfolio ul li a{
 text-decoration:none;
 color:#000;
 }
 .product_portfolio ul li:hover{
-
-background-color:#CCC;
+background-color:white;
 }
 .box_search input{
-    margin-top:9px;
-padding:5px 10px;
-background-color:#ffff;
-border-radius:5px;
-border:1px #ccc solid;
+    margin-top:4px;
+    padding:5px 10px;
+    background-color:#ffff;
+    border-radius:5px;
+    border:1px #ccc solid;
+    width: 300px;
+    margin-left: 90px;
 }
+
 .selling_products img{
 width:20%;
-height:50px;
+height:64px;
 margin-right:10px;
 }
 .selling_products a{
@@ -322,8 +343,8 @@ margin-right:10px;
     text-decoration:none;
 }
 .selling_products a:hover{
-    color:#000;
-    text-decoration:underline;
+    color:red;
+    text-decoration:none;
 }
 .banner2 img{
 width:60%;
@@ -498,8 +519,23 @@ font-size:2vv;
   .spct{
     text-align: center;
   }
-  .thongbao{
-    color: red;
+  #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: red; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
   }
-
+  
+  #myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
+  }
   

@@ -5,6 +5,9 @@
             <button class="pre" onclick="pre()">&#10094;</button>
             <button class="next" onclick="next()">&#10095;</button>
         </div>
+        <br>
+            <h2 class="center">Tất cả sản phẩm</h2>
+            <br>
         <div class="items">
             <?php
               $i=0;

@@ -1,11 +1,12 @@
 <div class="row2">
          <div class="row2 font_title">
-          <h1>THÊM MỚI SAN PHAM</h1>
+          <h1>THÊM MỚI SẢN PHẨM</h1>
          </div>
          <div class="row2 form_content ">
           <form action="index.php?act=addsp" method="POST" enctype="multipart/form-data">
            <div class="row2 mb10 form_content_container">
-           <label> Danh mục </label> <br>
+           <label> Danh mục </label> 
+        
            <select name="iddm" >
             <?php
               foreach($listdanhmuc as $danhmuc){
@@ -19,22 +20,22 @@
            </div>
 
            <div class="row2 mb10">
-            <label>Tên san pham </label> <br>
+            <label>Tên sản phẩm </label>
             <input type="text" name="tensp" >
            </div>
 
            <div class="row2 mb10">
-            <label>Gia</label> <br>
+            <label>Giá</label> 
             <input type="text" name="giasp" >
            </div>
 
            <div class="row2 mb10">
-            <label>hinh </label> <br>
+            <label>Hình ảnh</label> 
             <input type="file" name="hinh" >
            </div>
 
            <div class="row2 mb10">
-            <label>Mo ta </label> <br>
+            <label>Mô tả </label> 
             <textarea name="mota" cols="30" rows="10"></textarea>
            </div>
 

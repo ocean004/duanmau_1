@@ -3,6 +3,9 @@
           <h1>DANH SÁCH LOẠI HÀNG HÓA</h1>
          </div>
          <form action="index.php?act=listsp" method="POST">
+         <div class="row mb10 ">        
+                <a href="index.php?act=addsp"> <input  class="mr20" type="button" value="NHẬP THÊM"></a>
+           </div>
            <div class="row2 mb10 formds_loai">
             <form action="#" method="post"></form>
             <input type="text" name="kyw">
@@ -22,12 +25,12 @@
           
            <table>
             <tr>
-                <th></th>
+                
                 <th>MÃ LOẠI</th>
-                <th>TÊN sản phẩm</th>
+                <th>TÊN SẢN PHẨM</th>
                 <th>HÌNH</th>
                 <th>GIÁ</th>
-                <th>Lượt xem</th>
+                <th>LLƯỢT XEM</th>
                 <th></th>
             </tr>
             <?php
@@ -42,8 +45,7 @@
                         $hinh = "no photo";
                     }
 
-                    echo '<tr>
-                        <td><input type="checkbox" name="" id=""></td>
+                    echo '<tr>                       
                         <td>'.$id.'</td>
                         <td>'.$name.'</td>
                         <td>'.$hinh.'</td>
@@ -57,8 +59,7 @@
                      
            </table>
            </div>
-           <div class="row mb10 ">
-         
+           <div class="row mb10 ">        
             <a href="index.php?act=addsp"> <input  class="mr20" type="button" value="NHẬP THÊM"></a>
            </div>
           </form>
