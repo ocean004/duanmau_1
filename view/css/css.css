@@ -46,6 +46,9 @@ align-items: center;
 .mb1{
 margin-bottom:5px;
 }
+.mb2{
+  margin:10px;
+}
 .mb10{
   margin-bottom:10px;
 }
@@ -141,6 +144,9 @@ padding:13px 0;
   border-bottom-right-radius:5px;
   min-height:200px;
   padding:20px;
+}
+.box_content table{
+ width: 100%;
 }
 .box_content2{
   padding:20px;
@@ -532,3 +538,4 @@ label{
 #myBtn:hover {
   background-color: #555; /* Add a dark-grey background on hover */
 }
+/* css new */

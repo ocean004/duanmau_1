@@ -102,6 +102,23 @@
                 }
                 include "view/cart/viewcart.php";
                 break;
+            case 'delcart':
+                if(isset($_GET['idcart'])){
+                    array_splice($_SESSION['mycart'],$_GET['idcart'],1);
+                }else{
+                    $_SESSION['mycart']=[];
+                }
+                header('Location: index.php?act=viewcart');
+                break;
+            case 'viewcart':
+                include "view/cart/viewcart.php";
+                break;
+            case 'bill':
+                include "view/cart/bill.php";
+                break;
+            case 'mybill':
+                include "view/cart/mybill.php";
+                break;
             case 'thoat':
                 session_unset();
                 header('Location: index.php');

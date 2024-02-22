@@ -26,6 +26,9 @@ body{
     width:90%;
     margin:0 auto;
 }
+.box_content table{
+  width: 100%;
+ }
 .row{
   display:flex;
   width:100%;
@@ -45,6 +48,9 @@ body{
 }
 .mb1{
   margin-bottom:5px;
+}
+.mb2{
+  margin:10px;
 }
 .mb10{
     margin-bottom:10px;
@@ -532,4 +538,4 @@ font-size:2vv;
   #myBtn:hover {
     background-color: #555; /* Add a dark-grey background on hover */
   }
-  
+  /* css new */

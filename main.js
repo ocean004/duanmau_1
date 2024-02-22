@@ -1,7 +1,7 @@
 var album=[];
 for(var i=0;i<5;i++){
     album[i]=new Image();
-    album[i].src="./img/anh"+i+".jpg";
+    album[i].src="./img/anh"+i+".jpeg";
 }
  var interval=setInterval(slideshow,3000);
 index=0;
