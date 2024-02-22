@@ -5,6 +5,9 @@
     include "model/danhmuc.php";
     include "model/binhluan.php";
     include "model/taikhoan.php";
+    if(!isset($_SESSION['mycart'])) $_SESSION['mycart']=[];
+
+    
 ?>
 <?php
     include "view/header.php";
@@ -63,7 +66,6 @@
                     $checkuser = checkuser($user,$pass);
                     if(is_array($checkuser)){
                         $_SESSION['user'] = $checkuser;                     
-                        //$thongbao = "Đăng nhập thành công";
                         header('Location: index.php');
                     }else{
                         $thongbao = "Tài khoản hoặc mật khẩu không đúng. Vui lòng kiểm tra hoặc đăng ký!";
@@ -83,11 +85,22 @@
                     
                     update_taikhoan($id,$user,$pass,$email,$address,$tel); 
                     $_SESSION['user'] = checkuser($user,$pass);              
-                    header('Location: index.php?act=edit_taikhoan');
-                    
-                    
+                    header('Location: index.php?act=edit_taikhoan');                               
                 }
                 include "view/taikhoan/edit_taikhoan.php";
+                break;
+            case 'addtocart':
+                if(isset($_POST['addtocart']) && ($_POST['addtocart'])){
+                    $id = $_POST['id'];
+                    $name = $_POST['name'];
+                    $img = $_POST['img'];
+                    $price = $_POST['price'];
+                    $soluong = 1;
+                    $thanhtien = $soluong * $price;
+                    $spadd = [$id, $name, $img, $price, $soluong, $thanhtien];
+                    array_push( $_SESSION['mycart'],$spadd);
+                }
+                include "view/cart/viewcart.php";
                 break;
             case 'thoat':
                 session_unset();

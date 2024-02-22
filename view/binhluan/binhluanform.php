@@ -21,8 +21,8 @@
     </style>
 </head>
 <body>
-    <div class="boxleft">
-        <div class=" mb">
+    <div class="mb">
+        <div class="">
             <div class="box_title ">BÌNH LUẬN</div>
             <div class="box_content form_account">
                 <?php
@@ -42,11 +42,10 @@
                     ?>
                 </table>
                 
-            <div class="box_search">
+            <div class="box_bl">
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
-                    <input type="hidden" name="idpro" value="<?=$idpro?>">
-                    
-                    <input type="text" name="noidung">
+                    <input type="hidden" name="idpro" value="<?=$idpro?>">            
+                    <input class="noidung" type="text" name="noidung">
                     <input type="submit" name="guibinhluan" value="Gửi bình luận">
                 </form>
             </div>
@@ -75,7 +74,7 @@
                     $noidung = $_POST['noidung'];
                     $idpro = $_POST['idpro'];
                     $iduser = $_SESSION['user']['id'];
-                    $ngaybinhluan = date('h:i:sa d/m/Y');
+                    $ngaybinhluan = date('Y:d:m');
                     insert_binhluan($noidung, $iduser,$idpro,$ngaybinhluan);
                     header("Location: ".$_SERVER['HTTP_REFERER']);
                 }

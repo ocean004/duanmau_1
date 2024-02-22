@@ -2,6 +2,7 @@
 include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
+include "../model/taikhoan.php";
     include "header.php";
     // CONTROLLER DANH MUC
     if(isset($_GET['act'])){
@@ -119,7 +120,18 @@ include "../model/sanpham.php";
                     $listsanpham=loadall_sanpham_home();
                     include "sanpham/list.php";
                     break;
-
+                /* CONTROLLER TAI KHOAN */
+                case 'dskh':
+                    $listtaikhoan=loadall_taikhoan();
+                    include "taikhoan/list.php";
+                    break;
+                case 'xoatk':
+                    if(isset($_GET['id'])&&($_GET['id']>0)){
+                        delete_taikhoan($_GET['id']);
+                    }
+                    $listtaikhoan=loadall_taikhoan();
+                    include "taikhoan/list.php";
+                    break;
                 default:
                     include "home.php";
                     break;

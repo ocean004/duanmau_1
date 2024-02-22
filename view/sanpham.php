@@ -22,11 +22,11 @@
                 }
                 echo '<div class="box_items '.$mr.'">
                     <div class="box_items_img">
-                    <img src="'.$hinh.'" alt="">
+                    <a class="item_name" href="'. $linksp .'"><img src="'.$hinh.'" alt=""></a>
                     
                 </div>
                 <a class="item_name" href="'. $linksp .'">'.$name.'</a>
-                <p class="price">$'.$price.'</p>
+                <p class="price">'.$price.' đ</p>
                 <div class="add" href="">ADD TO CART</div>
                 
             </div>';

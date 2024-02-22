@@ -95,6 +95,9 @@ padding:13px 0;
 .boxleft{
   width:75%;
 }
+.bl{
+  width:974px;
+}
 .boxright{
  
   width:25%;
@@ -114,8 +117,6 @@ padding:13px 0;
  
 }
 .box_content{
-  
-  
   border-left:1px solid #ccc;
   border-right:1px solid #ccc;
   border-bottom:1px solid #ccc;
@@ -123,6 +124,9 @@ padding:13px 0;
   border-bottom-right-radius:5px;
   min-height:200px;
   padding:20px;
+}
+.box_content > h4{
+  color: red;
 }
 .box_content2{
   padding:20px;
@@ -191,7 +195,7 @@ height:300px;
   border:1px solid #EEEE;
   border-radius:5px;
   text-align:center;
-  height:360px;
+  height:400px;
   position:relative;
   overflow:hidden;
 }
@@ -212,7 +216,6 @@ height:300px;
 
 }
 .box_items .price{
-  margin:10px 0;
 color:red;
 font-weight:500;
 
@@ -298,9 +301,9 @@ color:#000;
 background-color:#CCC;
 }
 .box_search input{
-  margin-top:9px;
+margin-top:9px;
 padding:5px 10px;
-background-color:#ffff;
+background-color:red;
 border-radius:5px;
 border:1px #ccc solid;
 }

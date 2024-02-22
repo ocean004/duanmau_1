@@ -15,9 +15,11 @@
             <li class="form_li">
                 <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>
             </li>
+            <?php if($role==1){?>          
             <li class="form_li">
                 <a href="admin/index.php">Đăng nhập Admin</a>
             </li>
+            <?php } ?>
             <li class="form_li">
                 <a href="index.php?act=thoat">Thoát</a>
             </li>

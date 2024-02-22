@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DVT Shop</title>
+    <title>X Shop</title>
     <link rel="stylesheet" href="css/css.css">
     <script src="https://kit.fontawesome.com/5eef691f30.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/509cc166d7.js" crossorigin="anonymous"></script> 
@@ -30,27 +30,31 @@
             <ul>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="index.php">Trang chủ</a>
+                </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Danh mục</a>
-                  <div class="dropdown_content">
-                     <a href="">Đồng hồ</a>
-                     <a href="">Điện thoại</a>
-                     <a href="">Laptop</a>
-                  </div>
+                    <!-- <div class="dropdown_content">
+                      <a href="">Đồng hồ</a>
+                      <a href="">Điện thoại</a>
+                      <a href="">Laptop</a>
+                    </div> -->
+                    
+                </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Sản Phẩm</a>
-                  <div class="dropdown_content">
-                     <a href="">Đồng hồ</a>
-                     <a href="">Điện thoại</a>
-                     <a href="">Laptop</a>
-                  </div>
+                    <!-- <div class="dropdown_content">
+                      <a href="">Đồng hồ</a>
+                      <a href="">Điện thoại</a>
+                      <a href="">Laptop</a>
+                    </div> -->
+                </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Bình luận</a>
-                  <div class="dropdown_content">
-                     <a href="">Đồng hồ</a>
-                     <a href="">Điện thoại</a>
-                     <a href="">Laptop</a>
-                  </div>
+                    <!-- <div class="dropdown_content">
+                      <a href="">Đồng hồ</a>
+                      <a href="">Điện thoại</a>
+                      <a href="">Laptop</a>
+                    </div> -->
                </li>
                <div class="box_search ">
                   <form action="#" method="POST">

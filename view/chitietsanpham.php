@@ -13,8 +13,11 @@ td {
             <div class="box_content">
                 <?php 
                     $img = $img_path . $img;
-                    echo "<img src='$img' width='300' >";
+                    echo "<img src='$img' width='300'>";                 
                     echo "<p>$mota</p>";
+                    echo "<hr><br>";
+                    echo "<h4>$price đ</h4>";
+                    echo "<button>Mua hàng</button>"
                 ?>
 
             </div>
@@ -27,8 +30,7 @@ td {
             
             });
         </script>
-        <div class="mb" id="binhluan">
-            
+        <div class="bl" id="binhluan">
 
         </div>
 
