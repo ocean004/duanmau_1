@@ -8,9 +8,8 @@
                 extract($_SESSION['user']);
             ?>
             <h4>Xin chào: <?=$user?></h4><br>
-            
             <li class="form_li">
-                <a href="index.php?act=quenmk">Quên mật khẩu</a>
+                <a href="index.php?act=viewcart">Xem giỏ hàng</a>
             </li>
             <li class="form_li">
                 <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>

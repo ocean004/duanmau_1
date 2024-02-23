@@ -539,3 +539,20 @@ font-size:2vv;
     background-color: #555; /* Add a dark-grey background on hover */
   }
   /* css new */
+  .box_content1{
+    background-color: yellow;   
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    height:60px;
+    padding:20px;
+}
+.box_content input[type="text"]{
+  width:100%;
+  border:1px solid #ccc;
+  border-radius:5px ;
+  padding:6px 10px;
+  margin-bottom:12px;
+}
