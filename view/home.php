@@ -24,16 +24,16 @@
                     echo '<div class="box_items '.$mr.'">
                             <div class="box_items_img">
                                 <a class="item_name" href="'. $linksp .'"><img src="'.$hinh.'" alt=""></a>
+                            </div>
+                                <a class="item_name" href="'. $linksp .'">'.$name.'</a>  <br>
+                                <a class="price">'.$price.' đ</a>  
                                 <form action="index.php?act=addtocart" method="post">
                                     <input type="hidden" name="id" value="'.$id.'">
                                     <input type="hidden" name="name" value="'.$name.'">
                                     <input type="hidden" name="img" value="'.$img.'">
                                     <input type="hidden" name="price" value="'.$price.'">
                                     <input type="submit" name="addtocart" value="Thêm vào giỏ hàng">
-                                </form>
-                            </div>
-                                <a class="item_name" href="'. $linksp .'">'.$name.'</a>  <br>
-                                <a class="price">'.$price.' đ</a>                                                 
+                                </form>                                               
                                 
                                                               
                         </div>';

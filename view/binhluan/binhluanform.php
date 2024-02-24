@@ -45,7 +45,7 @@
             <div class="box_bl">
                 <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
                     <input type="hidden" name="idpro" value="<?=$idpro?>">            
-                    <input class="noidung" type="text" name="noidung">
+                    <input type="text" name="noidung">
                     <input type="submit" name="guibinhluan" value="Gửi bình luận">
                 </form>
             </div>
@@ -74,7 +74,7 @@
                     $noidung = $_POST['noidung'];
                     $idpro = $_POST['idpro'];
                     $iduser = $_SESSION['user']['id'];
-                    $ngaybinhluan = date('Y:d:m');
+                    $ngaybinhluan = date('h:i:sa d/m/Y');
                     insert_binhluan($noidung, $iduser,$idpro,$ngaybinhluan);
                     header("Location: ".$_SERVER['HTTP_REFERER']);
                 }

@@ -1,7 +1,7 @@
 <main class="catalog mb ">
     <div class="boxleft"> 
         <div class=" mb">
-            <div class="box_title">GIO HANG</div>
+            <div class="box_title">GIỎ HÀNG</div>
                 <div class="box_content">
                     <table border="1">
                         

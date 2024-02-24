@@ -12,12 +12,18 @@ td {
             </div>
             <div class="box_content">
                 <?php 
-                    $img = $img_path . $img;
-                    echo "<img src='$img' width='300'>";                 
+                    $hinh = $img_path . $img;
+                    echo "<img src='$hinh' width='300'>";                 
                     echo "<p>$mota</p>";
                     echo "<hr><br>";
                     echo "<h4>$price đ</h4>";
-                    echo "<button>Mua hàng</button>"
+                    echo '<form action="index.php?act=addtocart" method="post">
+                            <input type="hidden" name="id" value="'.$id.'">
+                            <input type="hidden" name="name" value="'.$name.'">
+                            <input type="hidden" name="img" value="'.$img.'">
+                            <input type="hidden" name="price" value="'.$price.'">
+                            <input type="submit" name="addtocart" value="Thêm vào giỏ hàng">
+                        </form>'
                 ?>
 
             </div>

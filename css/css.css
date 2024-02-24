@@ -1,8 +1,10 @@
-:root{
+/* :root{
     --white-color:#fff;
     --black-color:#000;
     --text-color:#333;
-}
+} */
+
+/*  */
 *{
     margin:0;
     padding:0;
@@ -20,7 +22,7 @@ body{
 .cart{
   width: 35px;
   height: 35px;
-  margin-left:400px ;
+  margin-left:570px ;
 }
 .boxcenter{
     width:90%;
@@ -245,17 +247,6 @@ height:400px;
   width:100%;
  bottom:30.66%;
 }
-.box_items_img .add{
-  transition: 0.5s ease-in-out;
-    position:absolute;
-    bottom:-100%;
-   
-padding:10px;
-background-color:aqua;
-border-radius:6px;
-margin-top:20px;
-
-}
 form{
     text-align:center;
 }
@@ -326,7 +317,7 @@ background-color:white;
 .box_bl input{
     margin-top:4px;
     padding:5px 10px;
-    background-color:red;
+    background-color:rgb(179, 170, 170);
     border-radius:5px;
     border:1px #ccc solid;
     width: 300px;
@@ -555,4 +546,16 @@ font-size:2vv;
   border-radius:5px ;
   padding:6px 10px;
   margin-bottom:12px;
+}
+.box_search{
+  width: 200px;
+  
+}
+.box_search input[type="text"]{
+  width:100%;
+  border:1px solid yellow;
+  border-radius:5px ;
+  padding:6px 10px;
+  margin-bottom:1px;
+  margin-left: 140px;
 }
