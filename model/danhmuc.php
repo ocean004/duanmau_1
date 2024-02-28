@@ -19,8 +19,7 @@ function loadall_danhmuc(){
     }
     function update_danhmuc($id,$tenloai){
         $sql = "UPDATE danhmuc SET name='".$tenloai."' WHERE id=".$id;
-        pdo_execute($sql);
-        
+        pdo_execute($sql);   
     }
     function load_ten_dm($iddm){
         if($iddm>0){

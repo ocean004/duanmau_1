@@ -3,6 +3,8 @@ include "../model/pdo.php";
 include "../model/danhmuc.php";
 include "../model/sanpham.php";
 include "../model/taikhoan.php";
+include "../model/binhluan.php";
+include "../model/cart.php";
     include "header.php";
     // CONTROLLER DANH MUC
     if(isset($_GET['act'])){
@@ -132,6 +134,40 @@ include "../model/taikhoan.php";
                     $listtaikhoan=loadall_taikhoan();
                     include "taikhoan/list.php";
                     break;
+                // CONTROLLER ĐƠN HÀNG
+                case 'listbill':
+                    if(isset($_POST['kyw'])&&($_POST['kyw']!="")){
+                        $kyw = $_POST['kyw'];
+                    }else{
+                        $kyw = "";
+                    }
+                    $listbill = loadall_bill($kyw,0);
+                    include "bill/listbill.php";
+                    break;
+                case 'suabill':
+                    if(isset($_GET['id'])&&($_GET['id']>0)){
+                        $bill=loadone_bill($_GET['id']);                
+                    }
+                    $listbill=loadall_bill($kyw="",0);
+                    include "bill/updatebill.php";
+                    break;
+                case 'updatebill':
+                    if(isset($_POST['capnhat']) && ($_POST['capnhat'])){
+                        $bill_status=$_POST['bill_status'];
+                        $id=$_POST['id'];
+                        update_bill($id,$bill_status);
+                        $thongbao="Cập nhật thành công";
+                    }
+                    $listbill=loadall_bill($kyw="",0);
+                    include "bill/listbill.php";
+                    break;
+                // case 'xoabill':
+                //     if(isset($_GET['id'])&&($_GET['id']>0)){
+                //         delete_bill($_GET['id']);
+                //     }
+                //     $listbill = loadall_bill_admin();
+                //     include "bill/listbill.php";
+                //     break;
                 default:
                     include "home.php";
                     break;

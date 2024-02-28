@@ -1,6 +1,6 @@
 <div class="row2">
          <div class="row2 font_title">
-          <h1>THÊM MỚI LOẠI HÀNG HÓA</h1>
+          <h1>THÊM MỚI DANH MỤC</h1>
          </div>
          <div class="row2 form_content ">
           <form action="index.php?act=adddm" method="POST">

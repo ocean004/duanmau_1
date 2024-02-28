@@ -33,7 +33,7 @@
                     <td>'.$cart[1].'</td>
                     <td>'.$cart[3].' đ</td>
                     <td>'.$cart[4].'</td>
-                    <td>'.$thanhtien.'</td>
+                    <td>'.$thanhtien.' đ</td>
                     '.$xoasp_td.'
                 </tr>';
             $i+=1;
@@ -65,7 +65,7 @@
                         <td>'.$cart['name'].'</td>
                         <td>'.$cart['price'].' đ</td>
                         <td>'.$cart['soluong'].'</td>
-                        <td>'.$cart['thanhtien'].'</td>
+                        <td>'.$cart['thanhtien'].' đ</td>
                     </tr>';
                 $i+=1;
             } 
@@ -100,8 +100,16 @@
             $bill=pdo_query($sql);
             return $bill;
         }
-        function loadall_bill($iduser){
-            $sql= "SELECT * FROM bill WHERE iduser=".$iduser;
+        function loadall_bill($kyw="",$iduser=0){
+            $sql="SELECT * FROM bill WHERE 1";
+            if($iduser>0) $sql.=" AND iduser=".$iduser;
+            if($kyw!="") $sql.=" AND id LIKE '%".$kyw."%'";
+            $sql.=" ORDER BY id desc";
+            $listbill=pdo_query($sql);
+            return $listbill;
+        }
+        function loadall_bill_home($iduser){
+            $sql="SELECT * FROM bill WHERE iduser=".$iduser;
             $listbill=pdo_query($sql);
             return $listbill;
         }
@@ -110,14 +118,21 @@
             $bill=pdo_query($sql);
             return sizeof($bill);
         }
-        
+        function delete_bill($id){
+            $sql = "DELETE FROM bill WHERE id=".$id;
+            pdo_execute($sql);
+        }
+        function update_bill($id,$bill_status){
+            $sql="UPDATE bill SET bill_status='".$bill_status."' WHERE id=".$id;
+            pdo_execute($sql);   
+        }
         function get_ttdh($n){
             switch ($n){
                 case '0':
                     $tt = "Đơn hàng mới";
                     break;
                 case '1':
-                    $tt = "Đang xử ";
+                    $tt = "Đang xử lý";
                     break;
                 case '2':
                     $tt = "Đang giao";
@@ -127,6 +142,20 @@
                     break;
                 default:
                     $tt = "Đơn hàng mới";
+                    break;
+            }
+            return  $tt;
+        }
+        function get_pttt($n){
+            switch ($n){
+                case '0':
+                    $tt = "Thanh toán khi nhận hàng";
+                    break;
+                case '1':
+                    $tt = "Thanh toán online";
+                    break;
+                default:
+                    $tt = "Thanh toán khi nhận hàng";
                     break;
             }
             return  $tt;

@@ -13,7 +13,7 @@ function loadall_sanpham_home(){
     return  $listsanpham;
 }
 function loadall_sanpham_top10(){
-    $sql="select * from sanpham where 1 order by luotxem desc limit 0,10";
+    $sql="select * from sanpham where 1 order by luotxem desc limit 0,5";
     $listsanpham=pdo_query($sql);
     return $listsanpham;
 }

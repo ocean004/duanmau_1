@@ -59,7 +59,7 @@
                             extract($bl);
                             echo '<tr><td>'.$noidung.'</td>';
                             echo '<td>'.$iduser.'</td>';
-                            echo '<td>'.$ngaybinhluan.'</td></tr>';
+                            // echo '<td>'.$ngaybinhluan.'</td></tr>';
                                     
                         }
                     ?>

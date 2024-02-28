@@ -5,7 +5,7 @@
 ?>
 <div class="row2">
          <div class="row2 font_title">
-          <h1>CẬP NHẬT LOẠI HÀNG HÓA</h1>
+          <h1>CẬP NHẬT DANH MỤC</h1>
          </div>
          <div class="row2 form_content ">
           <form action="index.php?act=updatedm" method="POST">

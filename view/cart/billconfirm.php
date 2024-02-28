@@ -3,21 +3,22 @@
         <?php
             if(isset($bill)&&(is_array($bill))){
                 extract($bill);
+                $pttt = get_pttt($bill['bill_pttt']);
             }
         ?> 
         <div class="mb">
             <div class="box_title">CẢM ƠN</div>
                 <div class="box_content">
-                    <h2 text-align="center">Cảm ơn quý khách đã đặt hàng!</h2>
+                    <center><h2>Cảm ơn quý khách đã đặt hàng!</h2></center>
                 </div>
         </div>   
                 <div class="mb">
                     <div class="box_title">THÔNG TIN ĐƠN HÀNG</div>
-                        <div class="box_content row" style="text-align: center;">
-                            <p>Mã Đơn Hàng: DAM <?=$bill['id'];?></p>
+                        <div class="box_content" style="text-align: center;">
+                            <p>Mã Đơn Hàng:DVT-<?=$bill['id'];?></p>
                             <p>Ngày đặt hàng: <?=$bill['ngaydathang'];?></p> 
-                            <p>Tổng đơn hàng: <?=$bill['total'];?></p> 
-                            <p>PTTT: <?=$bill['bill_pttt'];?></p>
+                            <p>Tổng đơn hàng: <?=$bill['total'];?>đ</p> 
+                            <p>PTTT: <?=$pttt;?></p>
                         </div>
                 </div>
                 <div class="mb">

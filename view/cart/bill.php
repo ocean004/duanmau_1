@@ -60,7 +60,6 @@
                     </div>
                     <div class="row mb center mb2">
                         <a href="index.php"><input type="button" value="Về trang chủ"></a>
-                        <!-- <a href="index.php?act=billconfirm"><input type="submit" value="Đồng ý đặt hàng"></a> -->
                         <a href=""><input type="submit" value="Đồng ý đặt hàng" name="dongydathang"></a>
                     </div>
 

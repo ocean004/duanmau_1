@@ -118,7 +118,7 @@
             case 'billconfirm':
                 if(isset($_POST['dongydathang']) && ($_POST['dongydathang'])){
                     if(isset($_SESSION['user'])) $iduser= $_SESSION['user']['id'];
-                    else   $id=0;
+                    else $id=0;
                     $user = $_POST['user'];
                     $address = $_POST['address'];
                     $email = $_POST['email'];
@@ -141,7 +141,7 @@
                 include "view/cart/billconfirm.php";
                 break;
             case 'mybill':
-                $listbill= loadall_bill($_SESSION['user']['id']);
+                $listbill= loadall_bill_home($_SESSION['user']['id']);
                 include "view/cart/mybill.php";
                 break;
             case 'thoat':

@@ -21,7 +21,7 @@
                                             <th>DVT-'.$bill['id'].'</th>
                                             <th>'.$bill['ngaydathang'].'</th>
                                             <th>'.$countsp.'</th>
-                                            <th>'.$bill['total'].'</th>
+                                            <th>'.$bill['total'].' đ</th>
                                             <th>'.$ttdh.'</th>
                                         </tr>';
                                 }
