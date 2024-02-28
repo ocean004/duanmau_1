@@ -1,5 +1,4 @@
 <div class="boxright">
-
     <div class="mb">
         <div class="box_title">TÀI KHOẢN</div>
         <div class="box_content form_account">
@@ -9,7 +8,7 @@
             ?>
             <h4>Xin chào: <?=$user?></h4><br>
             <li class="form_li">
-                <a href="index.php?act=viewcart">Xem giỏ hàng</a>
+                <a href="index.php?act=mybill">Đơn hàng của tôi</a>
             </li>
             <li class="form_li">
                 <a href="index.php?act=edit_taikhoan">Cập nhật tài khoản</a>

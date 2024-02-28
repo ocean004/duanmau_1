@@ -117,6 +117,8 @@
                 break;
             case 'billconfirm':
                 if(isset($_POST['dongydathang']) && ($_POST['dongydathang'])){
+                    if(isset($_SESSION['user'])) $iduser= $_SESSION['user']['id'];
+                    else   $id=0;
                     $user = $_POST['user'];
                     $address = $_POST['address'];
                     $email = $_POST['email'];
@@ -125,20 +127,21 @@
                     $ngaydathang = date('h:i:sa d/m/Y');
                     $tongdonhang = tongdonhang();
 
-                    $idbill = insert_bill($user,$address,$email,$tel,$pttt,$ngaydathang,$tongdonhang);
+                    $idbill = insert_bill($iduser,$user,$address,$email,$tel,$pttt,$ngaydathang,$tongdonhang);
 
                     // insert vao session my cart & $idbill
                     foreach ($_SESSION['mycart'] as $cart){
                         insert_cart($_SESSION['user']['id'],$cart[0],$cart[2],$cart[1],$cart[3],$cart[4],$cart[5],$idbill);
                     }
                     // xoa session cart
-                    $_SESSION['cart'] = [];
+                    $_SESSION['mycart'] = [];
                 }
-                $bill = loadone_bill($idbill);
-                $billct = loadall_cart($idbill);
+                $bill=loadone_bill($idbill);
+                $billct=loadall_cart($idbill);
                 include "view/cart/billconfirm.php";
                 break;
             case 'mybill':
+                $listbill= loadall_bill($_SESSION['user']['id']);
                 include "view/cart/mybill.php";
                 break;
             case 'thoat':

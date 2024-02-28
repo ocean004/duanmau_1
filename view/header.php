@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X Shop</title>
+    <title>DVT Shop</title>
     <link rel="stylesheet" href="./css/css.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://kit.fontawesome.com/5eef691f30.js" crossorigin="anonymous"></script>
@@ -20,8 +20,8 @@
        <!-- BIGIN HEADER -->
        <header>
         <div class="header">
-            <!-- <img class="icon" src="img/logo.png" alt=""> -->
-            <h1 class="center">X Shop</h1>
+            <img class="icon" src="img/logo.png" alt="">
+            <h1 class="center">DVT Shop</h1>
         </div>
         <div class="row mb menu">
             <ul>
@@ -30,28 +30,16 @@
                 </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Danh mục</a>
-                    <!-- <div class="dropdown_content">
-                      <a href="">Đồng hồ</a>
-                      <a href="">Điện thoại</a>
-                      <a href="">Laptop</a>
-                    </div> -->
+                   
                     
                 </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Sản Phẩm</a>
-                    <!-- <div class="dropdown_content">
-                      <a href="">Đồng hồ</a>
-                      <a href="">Điện thoại</a>
-                      <a href="">Laptop</a>
-                    </div> -->
+                    
                 </li>
                 <li class="dropdown">
                   <a class="dropdownbtn" href="">Bình luận</a>
-                    <!-- <div class="dropdown_content">
-                      <a href="">Đồng hồ</a>
-                      <a href="">Điện thoại</a>
-                      <a href="">Laptop</a>
-                    </div> -->
+                    
                </li>
                <div class="box_search">
                   <form action="#" method="POST">

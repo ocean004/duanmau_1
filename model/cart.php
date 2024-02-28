@@ -44,33 +44,7 @@
                 '.$xoasp_td2.'
             </tr>';
         }
-        function tongdonhang(){
-            $tong = 0;
-            foreach($_SESSION['mycart'] as $cart){
-                $thanhtien = $cart[3] * $cart[4];
-                $tong+=$thanhtien;
-            }
-            return  $tong;
-        }
-        function insert_bill($user,$address,$email,$tel,$pttt,$ngaydathang,$tongdonhang){
-            $sql = "INSERT INTO bill(bill_user,bill_address,bill_email,bill_tel,bill_pttt,ngaydathang,total) VALUES('$user','$address','$email','$tel','$pttt','$ngaydathang','$tongdonhang')";
-            return pdo_execute_return_lastInsertId($sql);
-        }
-        function insert_cart($iduser,$idpro,$img,$name,$price,$soluong,$thanhtien,$idbill){
-            $sql = "INSERT INTO cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill) VALUES('$iduser','$idpro','$img','$name','$price','$soluong','$thanhtien','$idbill')";
-            return pdo_execute($sql);
-        }
-        function loadone_bill($id){
-            $sql = "SELECT * FROM bill WHERE id = $id";
-            $bill = pdo_query_one($sql);
-            return $bill; 
-        }
-        function loadall_cart($idbill){
-            $sql= "SELECT * FROM cart WHERE idbill=".$idbill;
-            $bill=pdo_query($sql);
-            return $bill;
-        }
-        function bill_chi_tiet($listbill){
+        function bill_chi_tiet($idbill){
             global $img_path;
             $tong = 0;
             $i=0;
@@ -81,7 +55,7 @@
                     <th>Số lượng</th>
                     <th>Thành tiền</th>
                 </tr>';
-            foreach($listbill as $cart){
+            foreach($idbill as $cart){
                 $hinh = $img_path.$cart['img'];
                 $tong+=$cart['thanhtien'];
                 
@@ -100,5 +74,63 @@
                     <td>'.$tong.' đ</td>
                 </tr>';
             }
+        function tongdonhang(){
+            $tong = 0;
+            foreach($_SESSION['mycart'] as $cart){
+                $thanhtien = $cart[3] * $cart[4];
+                $tong+=$thanhtien;
+            }
+            return  $tong;
+        }
+        function insert_bill($iduser,$user,$address,$email,$tel,$pttt,$ngaydathang,$tongdonhang){
+            $sql = "INSERT INTO bill(iduser,bill_user,bill_address,bill_email,bill_tel,bill_pttt,ngaydathang,total) VALUES('$iduser','$user','$address','$email','$tel','$pttt','$ngaydathang','$tongdonhang')";
+            return pdo_execute_return_lastInsertId($sql);
+        }
+        function insert_cart($iduser,$idpro,$img,$name,$price,$soluong,$thanhtien,$idbill){
+            $sql = "INSERT INTO cart(iduser,idpro,img,name,price,soluong,thanhtien,idbill) VALUES('$iduser','$idpro','$img','$name','$price','$soluong','$thanhtien','$idbill')";
+            return pdo_execute($sql);
+        }
+        function loadone_bill($id){
+            $sql = "SELECT * FROM bill WHERE id=".$id;
+            $bill=pdo_query_one($sql);
+            return $bill; 
+        }
+        function loadall_cart($idbill){
+            $sql= "SELECT * FROM cart WHERE idbill=".$idbill;
+            $bill=pdo_query($sql);
+            return $bill;
+        }
+        function loadall_bill($iduser){
+            $sql= "SELECT * FROM bill WHERE iduser=".$iduser;
+            $listbill=pdo_query($sql);
+            return $listbill;
+        }
+        function loadall_cart_count($idbill){
+            $sql= "SELECT * FROM cart WHERE idbill=".$idbill;
+            $bill=pdo_query($sql);
+            return sizeof($bill);
+        }
+        
+        function get_ttdh($n){
+            switch ($n){
+                case '0':
+                    $tt = "Đơn hàng mới";
+                    break;
+                case '1':
+                    $tt = "Đang xử ";
+                    break;
+                case '2':
+                    $tt = "Đang giao";
+                    break;
+                case '3':
+                    $tt = "Đã giao";
+                    break;
+                default:
+                    $tt = "Đơn hàng mới";
+                    break;
+            }
+            return  $tt;
+        }
+        
         
 ?>
