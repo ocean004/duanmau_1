@@ -6,7 +6,7 @@
             <button class="next" onclick="next()">&#10095;</button>
         </div>
         <br>
-        <h2 style="text-align: center; color:#367fa9;margin-bottom: 20px;">Tất cả sản phẩm</h2>
+        <h2 style="text-align: center;margin-bottom: 20px;">Sản phẩm theo danh mục</h2>
         <div class="items">
             <?php
             $i=0;

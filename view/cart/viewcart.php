@@ -11,7 +11,7 @@
                     </table>
                 </div>
         </div>
-        <div class="row mb center mb2">
+        <div class="row center mb2">
             <a href="index.php"><input type="button" value="Về trang chủ"></a>
             <a href="index.php?act=bill"><input type="button" value="Tiếp tục đặt hàng"></a>
             <a href="index.php?act=delcart"><input type="button" value="Xóa giỏ hàng"></a>

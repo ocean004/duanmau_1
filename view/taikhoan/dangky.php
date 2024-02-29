@@ -2,7 +2,7 @@
     <div class="boxleft">
         <div class="  mb">
             <div class="box_title">
-                ĐĂNG KÝ THÀNH VIÊN
+                ĐĂNG KÝ TÀI KHOẢN
             </div>
             <div class="box_content">
                 <form action="index.php?act=dangky" method="post">

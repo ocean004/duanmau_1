@@ -30,15 +30,15 @@
             <h4>Mật khẩu</h4><br>
             <input type="password" name="pass">
             <br>
-            <input type="checkbox" name="" id="">Ghi nhớ tài khoản?
+            <input type="checkbox" name="">Ghi nhớ tài khoản?
             <br>
             <input type="submit" value="Đăng nhập" name="dangnhap">
             </form>
             <li class="form_li">
-                <a href="#">Quên mật khẩu</a>
+                <a href="#">Quên mật khẩu?</a>
             </li>
             <li class="form_li">
-                <a href="index.php?act=dangky">Đăng kí thành viên</a>
+                <a href="index.php?act=dangky">Đăng kí tài khoản</a>
             </li>
             <?php } ?>
         </div>
